@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bdoardvbp8mq3"]
+
+[ext_resource type="Script" uid="uid://c8xiq7icil1ex" path="res://window_control.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cuwwmcxrwr0oa" path="res://player_test.gd" id="2_h2yge"]
+
+[node name="Main" type="Node2D" unique_id=609294882]
+
+[node name="Window control" type="Node2D" parent="." unique_id=1245967490]
+script = ExtResource("1_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="Window control" unique_id=459471723]
+position = Vector2(580, 328)
+limit_enabled = false
+
+[node name="Player test" type="Node2D" parent="." unique_id=1051825572]
+script = ExtResource("2_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="Player test" unique_id=129531685]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 403.0
+offset_top = 421.0
+offset_right = 443.0
+offset_bottom = 461.0
+grow_horizontal = 2
+grow_vertical = 2

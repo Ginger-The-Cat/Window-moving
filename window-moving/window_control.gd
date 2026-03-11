@@ -1,5 +1,8 @@
 extends Node2D
 
+var width = 500
+var height = 500
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -9,12 +12,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var rand = RandomNumberGenerator.new()
 	
-	var width = 500
-	var height = 500
-	
-	
 	get_window().size = Vector2(width*2, height*2)
 	get_window().position = Vector2(position.x, position.y)
+	
+	$Camera2D.zoom = Vector2(width / $Camera2D.get_viewport().size.x, height / $Camera2D.get_viewport().size.y)
+	
 	if Input.is_action_pressed("ui_right"):
 		position.x += 4
 	if Input.is_action_pressed("ui_down"):
@@ -24,5 +26,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_up"):
 		position.y -= 4
 	
-	
-	print(position.x)
+	if Input.is_action_pressed("test_wider"):
+		width += 4
+	if Input.is_action_pressed("test_higher"):
+		height += 4
