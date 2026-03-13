@@ -10,14 +10,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var rand = RandomNumberGenerator.new()
-	if Input.is_action_just_pressed("test_lock_cam"):
-		$RemoteTransform2D.update_position = !$RemoteTransform2D.update_position
-		print($"RemoteTransform2D".update_position)
-	
-	
-	get_window().size = Vector2(width*2, height*2)
-	get_window().position = Vector2(position.x, position.y)
 	
 	if Input.is_action_pressed("ui_right"):
 		position.x += 4
@@ -32,3 +24,15 @@ func _process(delta: float) -> void:
 		width += 4
 	if Input.is_action_pressed("test_higher"):
 		height += 4
+	
+	
+	
+	get_window().size = Vector2(width*2, height*2)
+	get_window().position = Vector2(position.x, position.y)
+	
+	if Input.is_action_just_pressed("test_lock_cam"):
+		$RemoteTransform2D.update_position = !$RemoteTransform2D.update_position
+	
+	print("Window Pos: ", get_window().position)
+	print("Camera Pos: ", $"../Camera2D".position)
+	print("_________")
