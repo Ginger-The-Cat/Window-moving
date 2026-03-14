@@ -1,6 +1,4 @@
-extends Node2D
-
-@export var size : Vector2i
+extends Window
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,7 +6,8 @@ func _ready() -> void:
 	get_window().borderless = true
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	get_window().size = size
-	get_window().position = Vector2(position.x-size.x/2, position.y-size.y/2)
+	pass
+	
