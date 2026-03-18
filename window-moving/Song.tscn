@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b6kdk1stdil0x"]
+
+[ext_resource type="AudioStream" uid="uid://bs6fpr7hu5lcy" path="res://Sasakure Haraguchi Song.mp3" id="1_jhvj4"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=2111050568]
+stream = ExtResource("1_jhvj4")
+volume_db = -13.045
+autoplay = true
